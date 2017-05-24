@@ -149,12 +149,12 @@ user_mktime($_SESSION['times']);
 			</div>
 						
 			<!--优秀项目展示-->
-			<?php 
+			<?php
 			$sql = "SELECT * FROM tb_dynamic ORDER BY id DESC LIMIT 0,6";
 			$result = mysqli_query($conn,$sql);
 			$row_num = mysqli_num_rows($result);
 			for($i=0;$i<$row_num;$i++){
-				$row = mysqli_fetch_array($result);
+			    $row = mysqli_fetch_array($result);
 				$id = $row['id'];//当前行id
 				$dtitle = $row['dtitle'];
 				$dpath = $row['dpath']; //$dpath显示图片
